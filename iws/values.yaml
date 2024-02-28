@@ -1,0 +1,199 @@
+mongodb-operator:
+  community-operator-crds:
+    enabled: false
+
+# This flag is required to be false in order to enable resource limits for cpu & memory on pods
+noResources: false
+
+erAdminApp:
+  tag: latest
+  resources:
+    limits:
+      cpu: 300m
+      memory: 200Mi
+    requests:
+      cpu: 50m
+      memory: 50Mi
+erAnalytics:
+  tag: "0.0.24"
+  resources:
+    limits:
+      cpu: 200m
+      memory: 1000Mi
+    requests:
+      cpu: 200m
+      memory: 1000Mi
+erCustomerApp:
+  tag: "latest"
+  resources:
+    limits:
+      cpu: 800m
+      memory: 300Mi
+    requests:
+      cpu: 800m
+      memory: 300Mi
+developerApp:
+  tag: "0.1.2"
+  resources:
+    limits:
+      cpu: 300m
+      memory: 500Mi
+    requests:
+      cpu: 50m
+      memory: 50Mi
+erEmployeeApp:
+  tag: "latest"
+  resources:
+    limits:
+      cpu: 800m
+      memory: 300Mi
+    requests:
+      cpu: 800m
+      memory: 300Mi
+erFormapi:
+  tag: "3.0.0-dev-1.90.15"
+  resources:
+    limits:
+      cpu: "1"
+      memory: 2500Mi
+    requests:
+      cpu: "1"
+      memory: 2500Mi
+erIdp:
+  tag: "3.1.0"
+  resources:
+    limits:
+      cpu: 500m
+      memory: 500Mi
+    requests:
+      cpu: 500m
+      memory: 500Mi
+erIntegration:
+  tag: "3.0.0-dev"
+  resources:
+    limits:
+      cpu: "1"
+      memory: 1200Mi
+    requests:
+      cpu: "1"
+      memory: 1200Mi
+erRunner:
+  tag: "3.0.0-rc.4-dev"
+  resources:
+    limits:
+      cpu: 300m
+      memory: 800Mi
+    requests:
+      cpu: 50m
+      memory: 50Mi
+erTasks:
+  tag: "3.0.0-dev"
+  resources:
+    limits:
+      cpu: 300m
+      memory: 800Mi
+    requests:
+      cpu: 300m
+      memory: 800Mi
+nineIdentityOidc:
+  tag: "0.0.1"
+  resources:
+    limits:
+      cpu: 200m
+      memory: 200Mi
+    requests:
+      cpu: 100m
+      memory: 100Mi
+nineIdentityOidcConsent:
+  tag: "0.0.6"
+  resources:
+    limits:
+      cpu: 200m
+      memory: 200Mi
+    requests:
+      cpu: 100m
+      memory: 100Mi
+nineFormapi:
+  tag: "4.1.9-dev"
+  resources:
+    limits:
+      cpu: 600m
+      memory: 1000Mi
+    requests:
+      cpu: 600m
+      memory: 1000Mi
+nineRunner:
+  tag: "3.24.3-dev"
+  resources:
+    limits:
+      cpu: 300m
+      memory: 450Mi
+    requests:
+      cpu: 300m
+      memory: 450Mi
+nineSites:
+  tag: "3.24.5-dev"
+  resources:
+    limits:
+      cpu: 200m
+      memory: 200Mi
+    requests:
+      cpu: 200m
+      memory: 200Mi
+nineWorkerFormapi:
+  tag: "2.11.0-beta"
+  resources:
+    limits:
+      cpu: 300m
+      memory: 300Mi
+    requests:
+      cpu: 300m
+      memory: 300Mi
+iwsDevDeploy:
+  resources:
+    limits:
+      cpu: 500m
+      memory: 1000Mi
+    requests:
+      cpu: 500m
+      memory: 1000Mi
+
+mongoPassword: ""
+baseDomainIntegratedHR: devel.integratedhr.com.au
+baseDomainIWSAustralia: devel.iwsaustralia.com.au
+
+pvs:
+  name:
+    - iws-er-efs-pv-admin-app
+    - iws-er-efs-pv-customer-app
+    - iws-er-efs-pv-employee-app
+    - iws-er-efs-pv-formapi
+    - iws-er-efs-pv-idp
+    - iws-er-efs-pv-integration
+    - iws-er-efs-pv-runner
+    - iws-er-efs-pv-tasks
+    - iws-er-efs-pv
+
+secretWorker:
+  username: "worker-uat@iwsaustralia.com.au"
+  password: ""
+
+secretData:
+  nineDrive:
+    awsSecretAccessKey: ""
+    awsAccessKeyId: ""
+    awsRegion: "ap-southeast-2"
+    drive: ""
+  s3:
+    awsAccessKeyId: ""
+    awsSecretAccessKey: ""
+    awsRegion: "ap-southeast-2"
+  sendgridApiKey: ""
+
+openidConnectSecrets:
+  forceRootClientCredentials: ""
+  systemSecret: ""
+  clientSecret: ""
+
+formAPI:
+  password: ""
